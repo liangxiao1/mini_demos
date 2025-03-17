@@ -1,0 +1,9 @@
+- name: Get kernel version
+  hosts: all
+  tasks:
+    - name: Gather system facts
+      ansible.builtin.setup:
+
+    - name: Show kernel version
+      debug:
+        msg: "The kernel version is {{ ansible_kernel }}"
